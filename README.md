@@ -27,6 +27,6 @@ We welcome and recognize all contributions. Please find the guide for contributi
 
 `ChemCalculator` was created by Joyce Wang, Kinslin Lv, Allyson Stoll. It is licensed under the terms of the MIT license.
 
-## Credits
+### Credits
 
-`ChemCalculator` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+This package was created with Cookiecutter and the UBC-MDS/cookiecutter-ubc-mds project template, modified from the [pyOpenSci/cookiecutter-pyopensci](https://github.com/pyOpenSci/cookiecutter-pyopensci) project template and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage).
