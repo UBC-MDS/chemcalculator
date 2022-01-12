@@ -6,7 +6,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = u"ChemCalculator"
+project = u"chemcalculator"
 copyright = u"2022, Joyce Wang, Kinslin Lv, Allyson Stoll"
 author = u"Joyce Wang, Kinslin Lv, Allyson Stoll"
 
