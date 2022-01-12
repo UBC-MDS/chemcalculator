@@ -50,26 +50,29 @@ Ready to contribute?
 
 In general, we ask you to follow the GitHub Flow workflow.
 
-Here's how to set up simpler_eda for local development.
-
+Here's how to set up ChemCalculator for local development.
 1. If you don't have a GitHub, you would need to create one and you would need to install Git for the following steps.
 2. Fork the `ChemCalculator` repo on GitHub.
 3. Clone your fork locally::
 
-    `$ git clone git@github.com:your_name_here/ChemCalculator.git`
+    $ git clone git@github.com:your_name_here/ChemCalculator.git
 
 4. Install your local copy (it is recommended to do this with a virtual environment). The method of installation will depend on the packaging library being used.
    For example, if `setuptools` is being used (a setup.py file is present), install simpler_eda with:
 
-       `$ python setup.py install`
+   .. code-block:: console
 
-   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install ChemCalculator with:
+       $ python setup.py install
 
-       `$ poetry install`
+   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install simpler_eda with:
+
+   .. code-block:: console
+
+       $ poetry install
 
 5. Create a branch for local development and make your changes locally::
 
-    `$ git checkout -b name-of-your-bugfix-or-feature`
+    $ git checkout -b name-of-your-bugfix-or-feature
 
 6. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
    For example, if the package uses the poetry package management library, black formatting style and pytest for testing::
