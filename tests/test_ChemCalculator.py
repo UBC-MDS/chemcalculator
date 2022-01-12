@@ -1,1 +1,1 @@
-from ChemCalculator import ChemCalculator
+from chemcalculator import chemcalculator

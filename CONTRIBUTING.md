@@ -9,7 +9,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/UBC-MDS/ChemCalculator or email to `kingslin@student.ubc.ca <kingslin@student.ubc.ca>` if you do not have a GitHub account.
+Report bugs at https://github.com/UBC-MDS/chemcalculator or email to `kingslin@student.ubc.ca <kingslin@student.ubc.ca>` if you do not have a GitHub account.
 
 If you are reporting a bug, please include:
 
@@ -29,13 +29,13 @@ and "help wanted" is open to whoever wants to implement it.
 
 ### Write Documentation
 
-ChemCalculator could always use more documentation, whether as part of the
-official ChemCalculator docs, in docstrings, or even on the web in blog posts,
+chemcalculator could always use more documentation, whether as part of the
+official chemcalculator docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/UBC-MDS/ChemCalculator/issues. Otherwise, email to `kingslin@student.ubc.ca <kingslin@student.ubc.ca>` is the alternative. 
+The best way to send feedback is to file an issue at https://github.com/UBC-MDS/chemcalculator/issues. Otherwise, email to `kingslin@student.ubc.ca <kingslin@student.ubc.ca>` is the alternative. 
 
 If you are proposing a feature:
 
@@ -50,20 +50,20 @@ Ready to contribute?
 
 In general, we ask you to follow the GitHub Flow workflow.
 
-Here's how to set up ChemCalculator for local development.
+Here's how to set up chemcalculator for local development.
 1. If you don't have a GitHub, you would need to create one and you would need to install Git for the following steps.
-2. Fork the `ChemCalculator` repo on GitHub.
+2. Fork the `chemcalculator` repo on GitHub.
 3. Clone your fork locally::
 ```
-    $ git clone git@github.com:your_name_here/ChemCalculator.git
+    $ git clone git@github.com:your_name_here/chemcalculator.git
 ```
 4. Install your local copy (it is recommended to do this with a virtual environment). The method of installation will depend on the packaging library being used.
-   For example, if `setuptools` is being used (a setup.py file is present), install ChemCalculator with:
+   For example, if `setuptools` is being used (a setup.py file is present), install chemcalculator with:
 
 ```
     $ python setup.py install
 ```
-   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install ChemCalculator with:
+   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install chemcalculator with:
 
 ```
        $ poetry install
@@ -75,7 +75,7 @@ Here's how to set up ChemCalculator for local development.
 6. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
    For example, if the package uses the poetry package management library, black formatting style and pytest for testing::
 ```
-    $ poetry run black ChemCalculator
+    $ poetry run black chemcalculator
     $ poetry run pytest
 ```
 7. Commit your changes and push your branch to GitHub::
@@ -97,4 +97,4 @@ Before you submit a pull request, check that it meets these guidelines:
 
 Code of Conduct
 ---------------
-Please note that the ChemCalculator project is released with a Contributor Code of Conduct. By contributing to this project you agree to abide by its terms.
+Please note that the chemcalculator project is released with a Contributor Code of Conduct. By contributing to this project you agree to abide by its terms.

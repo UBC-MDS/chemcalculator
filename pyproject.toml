@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "ChemCalculator"
+name = "chemcalculator"
 version = "0.1.0"
 description = "Calculate chemical formula mass or atomic mass (g/mol), convert moles to grams and grams to moles, and calculate percentage mass for chemical or atom of interest"
 authors = ["Joyce Wang, Kinslin Lv, Allyson Stoll"]
