@@ -3,14 +3,15 @@
 
 ## Overview 
 
-ChemCalculator is a python package useful for chemistry (mainly physical/inorganic/analytical chemistry) for purpose of calculating chemical formular mass in g/mol. The mole allows scientists to calculate the number of elementary entities (usually atoms or molecules ) in a certain mass of a given substance. Another property of Avogadro’s number is that the mass of one mole of a substance is equal to that substance’s molecular weight. For example, the mean molecular weight of water is 18.015 atomic mass units (amu), so one mole of water weight 18.015 grams. This property simplifies many chemical computations. This python package will be helpful to easily calculate the chemical formula mass, convert moles to grams and vice versa, and lastly calculate the percentage mass for the atomic nature of the elements in chemistry. 
+ChemCalculator is a python package useful for chemistry for purpose of calculating chemical formular mass in g/mol. The mole allows scientists to calculate the number of elementary entities (usually atoms or molecules) in a certain mass of a given substance. Another property of Avogadro’s number is that the mass of one mole of a substance is equal to that substance’s molecular weight. For example, the mean molecular weight of water is 18.015 atomic mass units (amu), so one mole of water weighs 18.015 grams. This property simplifies many chemical computations. This python package will be helpful to easily calculate the chemical formula mass, convert moles to grams and vice versa, and lastly calculate the percentage mass for the atomic nature of the elements in chemistry.
+
 
 ## Functions
 
-This package contains three functions, each that accepts basic formula for chemistry. The EDA functions can be used with a dataset with numerical and categorical features. Each functions will have it's own required and optional arguments to configure the properties of the plot.
-1. calculate chemical formula mass or atomic mass (g/mol)
+This package contains three functions. Each functions will have it's own required and optional arguments.
+1. calculate chemical formula mass or atomic mass for the imput chemical formula
 2. convert moles to grams and convert grams to moles
-3. calculate percentage mass for the atomic nature of the elements 
+3. calculate percentage mass for the desired atom or molecule
 
 ## Installation
 
