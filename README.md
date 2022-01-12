@@ -12,9 +12,16 @@ $ pip install ChemCalculator
 
 - TODO
 
-## Contributing
+## Contributors
+### Development Lead
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+|Contributor Name     | GitHub Username|
+|---------------------|-----------|
+|Kingslin Lv | [Kingslin0810](https://github.com/Kingslin0810)|
+|Joyce Wang      | [jo4356](https://github.com/jo4356)     |
+|Allyson Stoll       | [datallurgy](https://github.com/datallurgy) |
+
+We welcome and recognize all contributions. Please find the guide for contribution in [Contributing Document](https://github.com/UBC-MDS/ChemCalculator/blob/main/CONTRIBUTING.md).
 
 ## License
 
