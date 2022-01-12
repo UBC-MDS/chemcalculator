@@ -54,38 +54,36 @@ Here's how to set up ChemCalculator for local development.
 1. If you don't have a GitHub, you would need to create one and you would need to install Git for the following steps.
 2. Fork the `ChemCalculator` repo on GitHub.
 3. Clone your fork locally::
-
+```
     $ git clone git@github.com:your_name_here/ChemCalculator.git
-
+```
 4. Install your local copy (it is recommended to do this with a virtual environment). The method of installation will depend on the packaging library being used.
-   For example, if `setuptools` is being used (a setup.py file is present), install simpler_eda with:
+   For example, if `setuptools` is being used (a setup.py file is present), install ChemCalculator with:
 
-   .. code-block:: console
+```
+    $ python setup.py install
+```
+   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install ChemCalculator with:
 
-       $ python setup.py install
-
-   If `poetry` is being used (poetry.lock and pyproject.toml files are present), install simpler_eda with:
-
-   .. code-block:: console
-
+```
        $ poetry install
-
+```
 5. Create a branch for local development and make your changes locally::
-
+```
     $ git checkout -b name-of-your-bugfix-or-feature
-
+```
 6. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
    For example, if the package uses the poetry package management library, black formatting style and pytest for testing::
-
+```
     $ poetry run black ChemCalculator
     $ poetry run pytest
-
+```
 7. Commit your changes and push your branch to GitHub::
-
+```
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
-
+```
 8. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
@@ -99,4 +97,4 @@ Before you submit a pull request, check that it meets these guidelines:
 
 Code of Conduct
 ---------------
-Please note that the simpler_eda project is released with a Contributor Code of Conduct. By contributing to this project you agree to abide by its terms.
+Please note that the ChemCalculator project is released with a Contributor Code of Conduct. By contributing to this project you agree to abide by its terms.
