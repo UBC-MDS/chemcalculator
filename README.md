@@ -21,7 +21,7 @@ This package of basic chemistry calculations is meant to supplement an existing 
 This package contains three functions. Each function will have it's own required and optional arguments.
 
 1. `compute_mass`: Calculate the mass of the atoms or chemical formula for the input chemical formula.
-2. `moles_grams_converter`: Convert moles to grams and convert grams to moles. This function takes in a chemical formula such as H2O, a float number for the mass of molecule, a string to indicate conversion to be moles or grams, and produces another float number in grams or moles. This function is used to simply answer how many moles H2O in grams, and more friendly it will convert between moles and grams. In chemistry, the formula weight is a quantity computed by multiplying the atomic weight (in atomic mass units) of each element in a chemical formula by the number of atoms of that element present in the formula, then adding all of these products together. A common request on this function is to convert grams to moles or vice versa. To complete this calculation, you have to know what substance (like H2O) you are trying to convert. The reason is that the molar mass of the substance affects the conversion. 
+2. `moles_grams_converter`: Convert moles to grams and convert grams to moles.
 3. `percent_mass`: Calculate percentage mass for the desired atom or molecule.
 
 ## Installation
