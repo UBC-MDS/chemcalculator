@@ -21,7 +21,7 @@ This package of basic chemistry calculations is meant to supplement an existing 
 This package contains three functions. Each function will have it's own required and optional arguments.
 
 1. `compute_mass`: Calculate the mass of the atoms or chemical formula for the input chemical formula.
-2. `moles_gram_converter`: Convert moles to grams and convert grams to moles.
+2. `moles_grams_converter`: Convert moles to grams and convert grams to moles.
 3. `percent_mass`: Calculate percentage mass for the desired atom or molecule.
 
 ## Installation

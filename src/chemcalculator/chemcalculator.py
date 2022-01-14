@@ -33,6 +33,32 @@ def compute_mass(chemical):
     342.15
     """
 
+def moles_grams_converter(formula, mass, converter):
+    """
+    Converts moles to grams or grams to moles
+
+    Parameters
+    ----------
+    formula: string
+        the checmical formula for the conversion
+    mass: float
+        a float for the mass of molecule that needs to convert in grams or moles
+    converter: string
+        indicates to convert to either moles or grams
+
+    Returns
+    -------
+    float
+        a float that is converted in either moles or grams
+
+    Examples
+    --------
+    >>> moles_grams_converter("H2O", 0.05555, moles)
+    1.000748804
+    >>> moles_grams_converter("H2O", 18.01528, grams)
+    1
+    """
+
 def percent_mass(compound, element):
     """
     Calculates the percentage mass of an element (or compound) in a compound
