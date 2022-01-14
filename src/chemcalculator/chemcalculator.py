@@ -1,3 +1,6 @@
+from multiprocessing import Condition
+
+
 def compute_mass(chemical):
     """Computes the molar mass of the given chemical compound.
 
@@ -45,13 +48,6 @@ def percent_mass(compound, element):
     -------
     float
         the percentage mass of the element or compound of interest
-
-    Raises
-    ------
-    ValueError
-        String contains characters that are not allowed.
-    ValueError
-        String starts with lowercase letter.
     
     Examples
     --------
