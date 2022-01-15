@@ -39,23 +39,24 @@ def moles_grams_converter(formula, mass, converter):
 
     Parameters
     ----------
-    formula: string
+    formula : string
         the checmical formula for the conversion
-    mass: float
-        a float for the mass of molecule that needs to convert in grams or moles
-    converter: string
-        indicates to convert to either moles or grams
+    mass : float
+        the mass of molecule that needs to be converted (grams or moles)
+    converter : string
+        indicates to convert to either "moles" or "grams"
 
     Returns
     -------
     float
-        a float that is converted in either moles or grams
+        mass that is converted to either moles or grams
 
     Examples
     --------
-    >>> moles_grams_converter("H2O", 0.05555, moles)
+    >>> moles_grams_converter("H2O", 0.05555, "moles")
     1.000748804
-    >>> moles_grams_converter("H2O", 18.01528, grams)
+
+    >>> moles_grams_converter("H2O", 18.01528, "grams")
     1
     """
 
