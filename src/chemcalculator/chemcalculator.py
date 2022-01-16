@@ -89,5 +89,5 @@ def percent_mass(compound, element):
     """
     
     perc_mass = compute_mass(element)/compute_mass(compound)*100
-    print(f"The percentage mass of {element} in {compound} is: ")
+    print(f"The percentage mass of {element} in {compound} is: {perc_mass} %")
     return perc_mass
