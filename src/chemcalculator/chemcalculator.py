@@ -157,7 +157,7 @@ def moles_grams_converter(formula, mass, convert_to):
     >>> moles_grams_converter("H2O", 18.01528, "grams")
     1.000
     """
-    grams_per_mole = compute_mass()
+    grams_per_mole = compute_mass(formula)
     if convert_to == "grams":
         result = mass / grams_per_mole
     elif convert_to == "moles":
