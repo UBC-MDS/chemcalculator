@@ -131,9 +131,9 @@ def compute_mass(chemical):
     # sum and return mass
     return elements['Mass'].sum()
 
-def moles_grams_converter(formula, mass, converter):
+def moles_grams_converter(formula, mass, convert_to):
     """
-    Converts moles to grams or grams to moles
+    Converts between moles and grams depending on the conversion type provided
 
     Parameters
     ----------
@@ -141,8 +141,8 @@ def moles_grams_converter(formula, mass, converter):
         the checmical formula for the conversion
     mass : float
         the mass of molecule that needs to be converted (grams or moles)
-    converter : string
-        indicates to convert to either "moles" or "grams"
+    convert_to : string
+        the type of conversion to be made to either "moles" or "grams"
 
     Returns
     -------
@@ -152,11 +152,20 @@ def moles_grams_converter(formula, mass, converter):
     Examples
     --------
     >>> moles_grams_converter("H2O", 0.05555, "moles")
-    1.000748804
+    1.000
 
     >>> moles_grams_converter("H2O", 18.01528, "grams")
-    1
+    1.000
     """
+    grams_per_mole = compute_mass(formula)
+    if convert_to == "grams":
+        result = mass / grams_per_mole
+    elif convert_to == "moles":
+        result = mass * grams_per_mole
+    else:
+        raise Exception("Wrong arguments!")
+
+    return round(result, 3)
 
 def percent_mass(compound, element):
     """
