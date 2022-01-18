@@ -189,12 +189,12 @@ def percent_mass(compound, element):
     88.79
     
     >>> percent_mass("H2O", "H")
-    11.19
+    5.6
 
     >>> percent_mass("NaOH", "OH")
     42.52
     """
     
-    perc_mass = compute_mass(element)/compute_mass(compound)*100
+    perc_mass = round(compute_mass(element)/compute_mass(compound)*100, 3)
     print(f"The percentage mass of {element} in {compound} is: {perc_mass} %")
     return perc_mass
