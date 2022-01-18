@@ -82,7 +82,7 @@ def percent_mass(compound, element):
     88.79
     
     >>> percent_mass("H2O", "H")
-    11.19
+    5.6
 
     >>> percent_mass("NaOH", "OH")
     42.52
