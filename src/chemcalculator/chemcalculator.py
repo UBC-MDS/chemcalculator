@@ -4,7 +4,7 @@ from multiprocessing import Condition
 from collections import Counter
 
 # read in periodic table and create dictionary
-periodic_table = pd.read_csv('Periodic Table of Elements.csv', skiprows = 2)
+periodic_table = pd.read_csv('Periodic-Table-of-Elements.csv', skiprows = 2)
 periodic_table.set_index('Symbol', drop=True, inplace=True)
 periodic_table = periodic_table.to_dict(orient="index")
 
@@ -131,16 +131,33 @@ def percent_mass(compound, element):
     Examples
     --------
     >>> percent_mass("H2O", "O")
-    88.79
+    88.819
     
     >>> percent_mass("H2O", "H")
-    5.6
+    5.59
+
+    >>> percent_mass("H2O", "H2")
+    11.181
 
     >>> percent_mass("NaOH", "OH")
-    42.52
+    42.519
     """
-    
-    perc_mass = round(compute_mass(element)/compute_mass(compound)*100, 3)
+    __check_chemical_format(compound)
+    __check_chemical_format(element)
+
+    perc_mass = 0
+    compound_count = __chemical_elements(compound)
+    element_count = __chemical_elements(element)
+
+    if all(elem in list(compound_count) for elem in list(element_count)):
+        for elem in element_count:
+            if element_count[elem] <= compound_count[elem]:
+                perc_mass = round(compute_mass(element)/compute_mass(compound)*100, 3)
+            else:
+                raise ValueError("There cannot be more counts of elements in the sub-compound compared to the larger compound")
+    else:
+        raise ValueError("Please make sure the sub-compound is part of the larger compound")
+
     print(f"The percentage mass of {element} in {compound} is: {perc_mass} %")
     return perc_mass
 
@@ -223,3 +240,37 @@ def __chemical_elements(chemical):
             raw_element_list.append(simplified_element) 
     
     return Counter(raw_element_list)
+
+
+
+def __check_chemical_format(chemical):
+    """
+    Check that the chemical formula has correct format
+
+    Parameters
+    ----------
+    chemical : string
+        chemical formula to check
+
+    Raises
+    ------
+    TypeError
+        Entered value is not a string
+    ValueError
+        String contains characters that are not allowed
+    ValueError
+        String or subcomponent starts with a lowercase letter
+    """
+    allowed_characters = r'[^\(\)A-Za-z0-9]'
+    not_allowed_lowercase = r'^[a-z]|\([a-z]'
+    if isinstance(chemical, str): pass
+    else:
+        raise TypeError('Entered value is not a string')
+
+    if re.search(allowed_characters, chemical):
+        raise ValueError('String contains characters that are not allowed.')
+    else: pass
+
+    if re.search(not_allowed_lowercase, chemical):
+        raise ValueError('String or subcomponent starts with a lowercase letter.')
+    else: pass
