@@ -95,10 +95,10 @@ def moles_grams_converter(formula, mass, convert_to):
     Examples
     --------
     >>> moles_grams_converter("H2O", 0.05555, "moles")
-    1.000748804
+    1.000
 
     >>> moles_grams_converter("H2O", 18.01528, "grams")
-    1
+    1.000
     """
     grams_per_mole = compute_mass(formula)
     if convert_to == "grams":
