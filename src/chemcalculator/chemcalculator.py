@@ -50,23 +50,18 @@ def compute_mass(chemical):
     >>> compute_mass("(NH4)HS")
     51.111
     """
-    allowed_characters = r'[^\(\)A-Za-z0-9]'
-    not_allowed_lowercase = r'^[a-z]|\([a-z]'
+    __check_chemical_format(chemical)
     
-    if isinstance(chemical, str): pass
+    raw_elements = __chemical_elements(chemical)
+    
+    element_list = raw_elements.keys()
+    
+    if set(element_list).issubset(periodic_table_mass): pass
     else:
-        raise TypeError('Entered value is not a string')
-            
-    if re.search(allowed_characters, chemical):
-        raise ValueError('String contains characters that are not allowed.')
-    else: pass
-    
-    if re.search(not_allowed_lowercase, chemical):
-        raise ValueError('String or subcomponent starts with a lowercase letter.')
-    else: pass
+        raise ValueError('Chemical compound contains element not in periodic table.')
     
     # count and sum up all individual elements
-    df = pd.DataFrame.from_dict(__chemical_elements(chemical),
+    df = pd.DataFrame.from_dict(raw_elements,
                                 orient='index',
                                 columns = ["Counts"]).reset_index()
     df = df.rename(columns={"index": "Element"})
@@ -246,17 +241,17 @@ def __check_chemical_format(chemical):
     Raises
     ------
     TypeError
-        Entered value is not a string
+        Entered value is not a string.
     ValueError
-        String contains characters that are not allowed
+        String contains characters that are not allowed.
     ValueError
-        String or subcomponent starts with a lowercase letter
+        String or subcomponent starts with a lowercase letter.
     """
     allowed_characters = r'[^\(\)A-Za-z0-9]'
     not_allowed_lowercase = r'^[a-z]|\([a-z]'
     if isinstance(chemical, str): pass
     else:
-        raise TypeError('Entered value is not a string')
+        raise TypeError('Entered value is not a string.')
 
     if re.search(allowed_characters, chemical):
         raise ValueError('String contains characters that are not allowed.')
