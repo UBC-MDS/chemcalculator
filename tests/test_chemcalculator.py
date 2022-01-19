@@ -1,8 +1,16 @@
 from chemcalculator.chemcalculator import percent_mass
 
 
-
-
+def test_moles_grams_converter():
+    """
+    Test the moles_grams_converter function for correct output
+    """
+    assert moles_grams_converter("H2O", 18.01528, "grams") == pytest.approx(1, rel=1e-3)
+    
+    assert moles_grams_converter("H2O", 1, "moles") == pytest.approx(18.015, rel=1e-3)
+    
+    with pytest.raises(TypeError):
+        moles_grams_converter("H2O", 1, "tons")
 
 def test_percent_mass():
     """
