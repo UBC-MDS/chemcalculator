@@ -35,6 +35,8 @@ def compute_mass(chemical):
         String contains characters that are not allowed.
     ValueError
         String or subcomponent starts with lowercase letter.
+    ValueError
+        Chemical compound contains element not in periodic table.
 
     Examples
     --------
