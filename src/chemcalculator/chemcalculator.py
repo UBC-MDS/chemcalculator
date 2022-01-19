@@ -2,9 +2,10 @@ import re
 import pandas as pd
 from multiprocessing import Condition
 from collections import Counter
+from chemcalculator.datasets import get_periodic_table
 
 # read in periodic table and create dictionary
-periodic_table = pd.read_csv('Periodic-Table-of-Elements.csv', skiprows = 2)
+periodic_table = pd.read_csv(get_periodic_table(), skiprows = 2)
 periodic_table.set_index('Symbol', drop=True, inplace=True)
 periodic_table = periodic_table.to_dict(orient="index")
 
@@ -76,9 +77,9 @@ def compute_mass(chemical):
     # sum and return mass
     return df['Mass'].sum()
 
-def moles_grams_converter(formula, mass, convert_to):
+def moles_grams_converter(formula, mass, converter):
     """
-    Converts between moles and grams depending on the conversion type provided
+    Converts moles to grams or grams to moles
 
     Parameters
     ----------
@@ -86,8 +87,8 @@ def moles_grams_converter(formula, mass, convert_to):
         the checmical formula for the conversion
     mass : float
         the mass of molecule that needs to be converted (grams or moles)
-    convert_to : string
-        the type of conversion to be made to either "moles" or "grams"
+    converter : string
+        indicates to convert to either "moles" or "grams"
 
     Returns
     -------
@@ -97,20 +98,11 @@ def moles_grams_converter(formula, mass, convert_to):
     Examples
     --------
     >>> moles_grams_converter("H2O", 0.05555, "moles")
-    1.000
+    1.000748804
 
     >>> moles_grams_converter("H2O", 18.01528, "grams")
-    1.000
+    1
     """
-    grams_per_mole = compute_mass(formula)
-    if convert_to == "grams":
-        result = mass / grams_per_mole
-    elif convert_to == "moles":
-        result = mass * grams_per_mole
-    else:
-        raise Exception("Wrong arguments!")
-
-    return round(result, 3)
 
 def percent_mass(compound, element):
     """
@@ -142,6 +134,7 @@ def percent_mass(compound, element):
     >>> percent_mass("NaOH", "OH")
     42.519
     """
+    
     __check_chemical_format(compound)
     __check_chemical_format(element)
 
@@ -238,10 +231,8 @@ def __chemical_elements(chemical):
     
         for i in range(int(units)):
             raw_element_list.append(simplified_element) 
-    
+   
     return Counter(raw_element_list)
-
-
 
 def __check_chemical_format(chemical):
     """
