@@ -1,8 +1,8 @@
 
-from typing import Type
 from chemcalculator.chemcalculator import compute_mass
 from chemcalculator.chemcalculator import moles_grams_converter
 from chemcalculator.chemcalculator import percent_mass
+import pytest
 
 def test_compute_mass():
     """
