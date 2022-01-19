@@ -1,6 +1,31 @@
+from chemcalculator.chemcalculator import compute_mass
+from chemcalculator.chemcalculator import moles_grams_converter
 from chemcalculator.chemcalculator import percent_mass
 
+def test_compute_mass():
+    """
+    Test the compute_mass function for correct output.
+    """
+    assert compute_mass('H2O') == pytest.approx(18.013, rel = 1e-3)
+    
+    assert compute_mass('C12H22O11') == pytest.approx(342.275, rel = 1e-3)
+    
+    assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3)
+    
+    assert compute_mass('(NH4)HS') == pytest.approx(47.079, rel = 1e-3)
+    
+    with pytest.raises(TypeError):
+        compute_mass(['H2O'])
+        
+    with pytest.raises(ValueError):
+        compute_mass('CuSO4-5H2O')    
 
+    with pytest.raises(ValueError):
+        compute_mass('naOH')
+    
+    with pytest.raises(ValueError):
+        compute_mass('(nH4)HS')
+        
 def test_moles_grams_converter():
     """
     Test the moles_grams_converter function for correct output
