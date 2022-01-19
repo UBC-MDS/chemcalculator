@@ -47,7 +47,7 @@ We welcome and recognize all contributions. Please find the guide for contributi
 
 ## License
 
-`chemcalculator` was created by Joyce Wang, Kinslin Lv, Allyson Stoll. It is licensed under the terms of the MIT license.
+`chemcalculator` was created by Joyce Wang, Kingslin Lv, Allyson Stoll. It is licensed under the terms of the MIT license.
 
 ### Credits
 
