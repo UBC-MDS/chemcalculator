@@ -77,7 +77,7 @@ def compute_mass(chemical):
     # sum and return mass
     return df['Mass'].sum()
 
-def moles_grams_converter(formula, mass, converter):
+def moles_grams_converter(formula, mass, convert_to):
     """
     Converts moles to grams or grams to moles
 
@@ -109,7 +109,7 @@ def moles_grams_converter(formula, mass, converter):
     elif convert_to == "moles":
         result = mass * grams_per_mole
     else:
-        raise Exception("Please enter either 'grams' or 'moles'")
+        raise TypeError("Please enter either 'grams' or 'moles'")
 
     return round(result, 3)
 
@@ -152,7 +152,7 @@ def percent_mass(compound, element):
     compound_count = __chemical_elements(compound)
     element_count = __chemical_elements(element)
 
-    if all(elem in list(compound_count) for elem in list(element_count)):
+    if set(element_count).issubset(compound_count): 
         for elem in element_count:
             if element_count[elem] <= compound_count[elem]:
                 perc_mass = round(compute_mass(element)/compute_mass(compound)*100, 3)
