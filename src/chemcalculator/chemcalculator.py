@@ -103,6 +103,16 @@ def moles_grams_converter(formula, mass, converter):
     >>> moles_grams_converter("H2O", 18.01528, "grams")
     1
     """
+    grams_per_mole = compute_mass(formula)
+    if convert_to == "grams":
+        result = mass / grams_per_mole
+    elif convert_to == "moles":
+        result = mass * grams_per_mole
+    else:
+        raise Exception("Please enter either 'grams' or 'moles'")
+
+    return round(result, 3)
+
 
 def percent_mass(compound, element):
     """
