@@ -8,16 +8,16 @@ def test_compute_mass():
     """
     Test the compute_mass function for correct output.
     """
-    assert compute_mass('H2O') == pytest.approx(18.013, rel = 1e-3),
+    assert compute_mass('H2O') == pytest.approx(18.013, rel = 1e-3), \
     'compute_mass is not calculated properly (H2O).'
     
-    assert compute_mass('C12H22O11') == pytest.approx(342.275, rel = 1e-3),
+    assert compute_mass('C12H22O11') == pytest.approx(342.275, rel = 1e-3), \
     'compute_mass is not calculated properly (C12H22O11).'
     
-    assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3),
+    assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3), \
     'compute_mass is not calculated properly (Al2(SO4)3).'
     
-    assert compute_mass('(NH4)HS') == pytest.approx(51.107, rel = 1e-3),
+    assert compute_mass('(NH4)HS') == pytest.approx(51.107, rel = 1e-3), \
     'compute_mass is not calculated properly ((NH4)HS).'
     
 def test_compute_mass_error():
