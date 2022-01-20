@@ -8,14 +8,22 @@ def test_compute_mass():
     """
     Test the compute_mass function for correct output.
     """
-    assert compute_mass('H2O') == pytest.approx(18.013, rel = 1e-3)
+    assert compute_mass('H2O') == pytest.approx(18.013, rel = 1e-3),
+    'compute_mass is not calculated properly (H2O).'
     
-    assert compute_mass('C12H22O11') == pytest.approx(342.275, rel = 1e-3)
+    assert compute_mass('C12H22O11') == pytest.approx(342.275, rel = 1e-3),
+    'compute_mass is not calculated properly (C12H22O11).'
     
-    assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3)
+    assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3),
+    'compute_mass is not calculated properly (Al2(SO4)3).'
     
-    assert compute_mass('(NH4)HS') == pytest.approx(51.107, rel = 1e-3)
+    assert compute_mass('(NH4)HS') == pytest.approx(51.107, rel = 1e-3),
+    'compute_mass is not calculated properly ((NH4)HS).'
     
+def test_compute_mass_error():
+    """
+    Check that error is raised when input is invalid.
+    """
     with pytest.raises(TypeError):
         compute_mass(['H2O'])
         
@@ -29,7 +37,7 @@ def test_compute_mass():
         compute_mass('(nH4)HS')
         
     with pytest.raises(ValueError):
-    compute_mass('NaaaaaaaaOH')
+        compute_mass('NaaaaaaaaOH')
         
 def test_moles_grams_converter():
     """
