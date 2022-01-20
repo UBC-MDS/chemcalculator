@@ -182,7 +182,7 @@ def __chemical_elements(chemical):
     
     def decompose_elements(string):
         """Decompose string into list of components based on capital letters or parenteses."""
-        temp_list = re.findall(r'(\(.*?\)\d+)|([A-Z][^A-Z|(]*)', string)
+        temp_list = re.findall(r'(\(.*?\)\d+)|(\(.*?\))|([A-Z][^A-Z|(]*)', string)
         temp_list = [item for sublist in temp_list for item in sublist]
         temp_list = list(filter(None, temp_list))
         return temp_list
