@@ -29,7 +29,7 @@ def test_compute_mass():
         compute_mass('(nH4)HS')
         
     with pytest.raises(ValueError):
-    compute_mass('NaaaaaaaaOH')
+        compute_mass('NaaaaaaaaOH')
         
 def test_moles_grams_converter():
     """
