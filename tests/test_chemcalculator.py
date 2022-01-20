@@ -55,25 +55,25 @@ def test_percent_mass():
     Test the percent_mass function for correct output
     """
     assert percent_mass("H2O", "O") == pytest.approx(88.819, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (H2O, O)"
     
     assert percent_mass("H2O", "H") == pytest.approx(5.59, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (H2O, H)"
 
     assert percent_mass("H2O", "H2") == pytest.approx(11.181, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (H2O, H2)"
 
     assert percent_mass("NaOH", "OH") == pytest.approx(42.519, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (NaOH, OH)"
 
     assert percent_mass("H2SO4", "SO4") == pytest.approx(97.946, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (H2SO4, SO4)"
 
     assert percent_mass("H2SO4", "HSO4") == pytest.approx(98.973, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (H2SO4, HSO4)"
 
     assert percent_mass("Na(H2SO4)3", "NaH2SO4") == pytest.approx(38.165, rel=1e-3), \
-    "precent_mass is not calculated correctly."
+    "precent_mass is not calculated correctly (Na(H2SO4)3, NaH2SO4)"
 
 
 def test_percent_mass_error():
