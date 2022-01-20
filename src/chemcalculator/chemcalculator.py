@@ -190,7 +190,7 @@ def __chemical_elements(chemical):
     
     # separate compounds from simple elements
     for component in primary_list:
-        if re.match('\(.*?\)\d+', component):
+        if re.match('\(.*?\)\d+|\(.*?\)', component):
             compound_list.append(component)
             primary_list.remove(component)
             
