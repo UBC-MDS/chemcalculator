@@ -46,9 +46,28 @@ def test_moles_grams_converter():
     assert moles_grams_converter("H2O", 18.01528, "grams") == pytest.approx(1, rel=1e-3)
     
     assert moles_grams_converter("H2O", 1, "moles") == pytest.approx(18.015, rel=1e-3)
-    
+
+def test_moles_grams_converter_error():
+    """
+    Check that error is raised when input is invalid.
+    """
     with pytest.raises(TypeError):
-        moles_grams_converter("H2O", 1, "tons")
+        moles_grams_converter('H2O', 1, 'tons')
+        
+    with pytest.raises(TypeError):
+        moles_grams_converter(['H2O'], 1, 'moles')
+        
+    with pytest.raises(ValueError):
+        moles_grams_converter('CuSO4-5H2O', 1, 'moles')    
+
+    with pytest.raises(ValueError):
+        moles_grams_converter('naOH', 1, 'moles')
+    
+    with pytest.raises(ValueError):
+        moles_grams_converter('(nH4)HS', 1, 'moles')
+        
+    with pytest.raises(ValueError):
+        moles_grams_converter('NaaaaaaaaOH', 1, 'moles')
 
 def test_percent_mass():
     """
