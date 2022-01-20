@@ -14,7 +14,7 @@ def test_compute_mass():
     
     assert compute_mass('Al2(SO4)3') == pytest.approx(342.147, rel = 1e-3)
     
-    assert compute_mass('(NH4)HS') == pytest.approx(47.079, rel = 1e-3)
+    assert compute_mass('(NH4)HS') == pytest.approx(51.107, rel = 1e-3)
     
     with pytest.raises(TypeError):
         compute_mass(['H2O'])
@@ -27,6 +27,9 @@ def test_compute_mass():
     
     with pytest.raises(ValueError):
         compute_mass('(nH4)HS')
+        
+    with pytest.raises(ValueError):
+    compute_mass('NaaaaaaaaOH')
         
 def test_moles_grams_converter():
     """
