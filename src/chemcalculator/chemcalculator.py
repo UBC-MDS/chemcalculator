@@ -50,15 +50,13 @@ def compute_mass(chemical):
     342.15
     
     >>> compute_mass("(NH4)HS")
-    51.111
+    51.107
     """
     __check_chemical_format(chemical)
     
     raw_elements = __chemical_elements(chemical)
     
-    element_list = raw_elements.keys()
-    
-    if set(element_list).issubset(periodic_table_mass): pass
+    if set(raw_elements.keys()).issubset(periodic_table_mass): pass
     else:
         raise ValueError('Chemical compound contains element not in periodic table.')
     
