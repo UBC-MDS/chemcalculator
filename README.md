@@ -32,7 +32,19 @@ $ pip install chemcalculator
 
 ## Usage
 
-- TODO
+`chemcalculator` can be used as follows:
+```bash
+from chemcalculator.chemcalculator import compute_mass
+compute_mass("H2O")
+```
+```bash
+from chemcalculator.chemcalculator import moles_grams_converter
+moles_grams_converter("H2O", 0.05555, "moles")
+```
+```bash
+from chemcalculator.chemcalculator import percent_mass
+percent_mass("H2O", "0")
+```
 
 ## Contributors
 ### Development Lead
