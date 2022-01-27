@@ -12,10 +12,12 @@ pandas = "^1.4.0"
 python-semantic-release = "^7.24.0"
 codecov = "^2.1.12"
 semantic-release = "^0.1.0"
+Sphinx = "^4.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
+Sphinx = "^4.4.0"
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
