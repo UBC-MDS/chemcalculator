@@ -9,10 +9,25 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 pandas = "^1.4.0"
+python-semantic-release = "^7.24.0"
+codecov = "^2.1.12"
+semantic-release = "^0.1.0"
+Sphinx = "^4.4.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
+Sphinx = "^4.4.0"
+
+[tool.semantic_release]
+version_variable = "pyproject.toml:version" # version location
+branch = "main"                             # branch to make releases of
+changelog_file = "CHANGELOG.md"             # changelog file
+build_command = "pip install poetry && poetry build"  # build dists
+dist_path = "dist/"                         # where to put dists
+upload_to_pypi = false                      # don't auto-upload to PyPI
+remove_dist = false                         # don't remove dists
+patch_without_tag = "true"                  # always bump version on CD, even without angular commit (default is patch)
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
