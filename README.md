@@ -1,7 +1,6 @@
 # chemcalculator
 
 [![Documentation Status](https://readthedocs.org/projects/chemcalculator/badge/?version=latest)](https://chemcalculator.readthedocs.io/en/latest/?badge=latest)
-
 [![codecov](https://codecov.io/gh/UBC-MDS/chemcalculator/branch/main/graph/badge.svg?token=pbmgIww2wM)](https://codecov.io/gh/UBC-MDS/chemcalculator)
 ## Overview 
 
