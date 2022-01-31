@@ -5,6 +5,8 @@ description = "Calculate chemical formula mass or atomic mass (g/mol), convert m
 authors = ["Joyce Wang, Kinslin Lv, Allyson Stoll"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/UBC-MDS/chemcalculator"
+documentation = 'https://chemcalculator.readthedocs.io/'
 
 [tool.poetry.dependencies]
 python = "^3.9"
