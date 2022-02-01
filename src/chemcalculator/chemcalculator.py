@@ -64,7 +64,7 @@ def compute_mass(chemical):
     # sum and return mass
     return df['Mass'].sum()
 
-def moles_grams_converter(formula, mass, converter):
+def moles_grams_converter(formula, mass, convert_from):
     """
     Converts moles to grams or grams to moles
 
@@ -91,9 +91,9 @@ def moles_grams_converter(formula, mass, converter):
     1.000
     """
     grams_per_mole = compute_mass(formula)
-    if converter == "grams":
+    if convert_from == "grams":
         result = mass / grams_per_mole
-    elif converter == "moles":
+    elif convert_from == "moles":
         result = mass * grams_per_mole
     else:
         raise TypeError("Please enter either 'grams' or 'moles'")
