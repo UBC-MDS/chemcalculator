@@ -44,7 +44,7 @@ moles_grams_converter("H2O", 0.05555, "moles")
 ```
 ```bash
 from chemcalculator.chemcalculator import percent_mass
-percent_mass("H2O", "0")
+percent_mass("H2O", "O")
 ```
 
 ## Contributors
