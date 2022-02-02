@@ -2,6 +2,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/chemcalculator/badge/?version=latest)](https://chemcalculator.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/UBC-MDS/chemcalculator/branch/main/graph/badge.svg?token=pbmgIww2wM)](https://codecov.io/gh/UBC-MDS/chemcalculator)
+[![deploy](https://github.com/UBC-MDS/chemcalculator/actions/workflows/deploy.yml/badge.svg)](https://github.com/UBC-MDS/chemcalculator/actions/workflows/deploy.yml)
 ## Overview 
 
 chemcalculator is a python package useful for chemistry for the purpose of calculating chemical formular mass in g/mol. The mole allows scientists to calculate the number of elementary entities (usually atoms or molecules) in a certain mass of a given substance. The mass of one mole of a substance is equal to that substance’s molecular weight; as for instance, the mean molecular weight of water is 18.015 atomic mass units (amu), and so one mole of water weighs 18.015 grams. This property simplifies many chemical computations. This python package will be helpful to easily calculate the chemical formula mass, convert moles to grams and vice versa, and lastly calculate the percentage mass for the atomic nature of the elements in chemistry.
